@@ -4,6 +4,7 @@
 package dev.omico.fonts.google
 
 import dev.omico.fonts.FontsDownloader
+import dev.omico.fonts.internal.downloadFile
 import dev.omico.fonts.internal.json
 
 abstract class GoogleFontsDownloader : FontsDownloader() {
@@ -22,9 +23,8 @@ abstract class GoogleFontsDownloader : FontsDownloader() {
         googleFontsZip.manifest.fileRefs
             .filter { fileRef -> fileRef.filename.startsWith(fontPrefix) }
             .forEach { fileRef ->
-                val downloadFile = resources.text.fromUri(fileRef.url).asFile()
                 val outputFile = outputDirectory.resolve(fileRef.filename.removePrefix(fontPrefix))
-                downloadFile.copyTo(outputFile, overwrite = true)
+                downloadFile(fileRef.url, outputFile)
             }
     }
 }

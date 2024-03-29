@@ -4,6 +4,7 @@ versions:
   kotlin: "1.9.23"
   kotlinx:
     serialization: "1.6.3"
+  okhttp: "5.0.0-alpha.12"
   plugins:
     gradle.enterprise: "3.16.2"
     spotless: "6.25.0"
@@ -25,6 +26,10 @@ plugins:
 
 dependencies:
   mavenCentral:
+    com.squareup.okhttp3:
+      okhttp:
+        alias: okhttp
+        version: ${versions.okhttp}
     org.jetbrains.kotlin:
       kotlin-gradle-plugin:
         alias: kotlinGradlePlugin

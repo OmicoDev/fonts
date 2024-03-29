@@ -15,4 +15,5 @@ dependencies {
     implementation(me.omico.consensus.git)
     implementation(me.omico.consensus.publishing)
     implementation(me.omico.consensus.spotless)
+    implementation(okhttp)
 }
