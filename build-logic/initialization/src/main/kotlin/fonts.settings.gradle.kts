@@ -4,8 +4,8 @@ import me.omico.gradm.addDeclaredRepositories
 addDeclaredRepositories()
 
 plugins {
+    id("fonts.develocity")
     id("fonts.gradm")
-    id("fonts.gradle-enterprise")
 }
 
 includeBuild("build-logic/project")
