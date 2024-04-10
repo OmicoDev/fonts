@@ -6,7 +6,7 @@ versions:
     serialization: "1.6.3"
   okhttp: "5.0.0-alpha.12"
   plugins:
-    develocity: "3.17"
+    develocity: "3.17.1"
     spotless: "6.25.0"
 
 repositories:
